@@ -52,7 +52,6 @@ namespace Logbook
                 uc.Location = new Point(0, y);
                 y += 70;
                 this.Controls.Add(uc);
-                uc.Name= student.Name;  
             }
         }
         private void ExitBtn_Click(object sender, EventArgs e)
