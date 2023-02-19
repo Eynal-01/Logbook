@@ -123,6 +123,26 @@ namespace Logbook.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_gem_stone_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gem-stone-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_gem_stone_48__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gem-stone-48 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_x_button_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-x-button-24", resourceCulture);

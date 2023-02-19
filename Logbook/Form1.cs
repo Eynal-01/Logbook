@@ -13,7 +13,6 @@ namespace Logbook
     public partial class Form1 : Form
     {
         public List<Student> Students { get; set; }
-
         public Form1()
         {
             InitializeComponent();
@@ -40,23 +39,39 @@ namespace Logbook
                 },
                 new Student
                 {
-                    Name="Valentine",
-                    Surname="Valentineli",
-                    FatherName="UFUFUF"
+                    Name="Bob",
+                    Surname="Marley",
+                    FatherName="Father"
                 }
             };
-            int y = 200;
+            int y = 259;
             foreach (var student in Students)
             {
                 var uc = new StudentUserControl();
-                uc.Location = new Point(0, y);
-                y += 70;
+                uc.Name = student.Name;
+                uc.Surname = student.Surname;
+                uc.Fathername = student.FatherName;
+                uc.Location = new Point(15, y);
+                y += 60;
                 this.Controls.Add(uc);
             }
         }
-        private void ExitBtn_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            LessonTextBox.Enabled = true;
+        }
+        private void AcceptLessonBtn_Click(object sender, EventArgs e)
+        {
+            if (LessonTextBox.Text != null)
+            {
+                LessonTextBox.Enabled = false;
+                LessonTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+        }
+        private void RejectLessonBtn_Click(object sender, EventArgs e)
+        {
+            LessonTextBox.Text = String.Empty;
+            LessonTextBox.Enabled = false;
         }
     }
 }
