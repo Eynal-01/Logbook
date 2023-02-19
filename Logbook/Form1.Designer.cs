@@ -35,6 +35,7 @@
             this.ReplacedteacherRadioBtn = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -71,9 +72,9 @@
             this.ExitBtn.FillColor = System.Drawing.Color.Red;
             this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ExitBtn.ForeColor = System.Drawing.Color.White;
-            this.ExitBtn.Location = new System.Drawing.Point(970, 0);
+            this.ExitBtn.Location = new System.Drawing.Point(947, 0);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(30, 30);
+            this.ExitBtn.Size = new System.Drawing.Size(35, 30);
             this.ExitBtn.TabIndex = 2;
             this.ExitBtn.Text = "X";
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
@@ -145,12 +146,24 @@
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "guna2Button1";
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(982, 0);
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 450);
+            this.guna2VScrollBar1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 450);
+            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.ReplacedteacherRadioBtn);
@@ -177,6 +190,7 @@
         private Guna.UI2.WinForms.Guna2RadioButton ReplacedteacherRadioBtn;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }
 

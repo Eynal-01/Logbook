@@ -18,7 +18,7 @@ namespace Logbook
         {
             InitializeComponent();
             DateLbl.Text = DateTime.Now.ToLongDateString().ToString();
-            Students=new List<Student>
+            Students = new List<Student>
             {
                 new Student
                 {
@@ -30,8 +30,29 @@ namespace Logbook
                 {
                     Name="Corc",
                     Surname="Corclu",
-                    FatherName="vtt"
+                    FatherName="Mike"
+                },
+                new Student
+                {
+                    Name="Phillip",
+                    Surname="Phillipli",
+                    FatherName="Johnny"
+                },
+                new Student
+                {
+                    Name="Valentine",
+                    Surname="Valentineli",
+                    FatherName="UFUFUF"
                 }
+            };
+            int y = 200;
+            foreach (var student in Students)
+            {
+                var uc = new StudentUserControl();
+                uc.Location = new Point(0, y);
+                y += 70;
+                this.Controls.Add(uc);
+                uc.Name= student.Name;  
             }
         }
         private void ExitBtn_Click(object sender, EventArgs e)
