@@ -33,7 +33,6 @@
             this.MainteacherRadioBtn = new Guna.UI2.WinForms.Guna2RadioButton();
             this.ReplacedteacherRadioBtn = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.LessonTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.AcceptLessonBtn = new Guna.UI2.WinForms.Guna2Button();
             this.RejectLessonBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -48,6 +47,7 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.Markall = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(10, 49);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(9, 56);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(746, 22);
             this.guna2HtmlLabel1.TabIndex = 0;
@@ -126,17 +126,6 @@
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(125, 22);
             this.guna2HtmlLabel2.TabIndex = 5;
             this.guna2HtmlLabel2.Text = "Subject of lesson";
-            // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1026, 0);
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 561);
-            this.guna2VScrollBar1.TabIndex = 7;
             // 
             // LessonTextBox
             // 
@@ -223,6 +212,7 @@
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Turquoise;
+            this.guna2CustomGradientPanel1.Controls.Add(this.Markall);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.DiamondCounttxtb);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel8);
@@ -346,10 +336,32 @@
             this.guna2Button1.Text = "guna2Button1";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // Markall
+            // 
+            this.Markall.AutoSize = true;
+            this.Markall.BackColor = System.Drawing.Color.Transparent;
+            this.Markall.CheckedState.BorderColor = System.Drawing.Color.Lime;
+            this.Markall.CheckedState.BorderThickness = 0;
+            this.Markall.CheckedState.FillColor = System.Drawing.Color.Lime;
+            this.Markall.CheckedState.InnerColor = System.Drawing.Color.Turquoise;
+            this.Markall.CheckedState.InnerOffset = -4;
+            this.Markall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Markall.Location = new System.Drawing.Point(354, 39);
+            this.Markall.Name = "Markall";
+            this.Markall.Size = new System.Drawing.Size(14, 13);
+            this.Markall.TabIndex = 9;
+            this.Markall.UncheckedState.BorderColor = System.Drawing.Color.Lime;
+            this.Markall.UncheckedState.BorderThickness = 2;
+            this.Markall.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.Markall.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Markall.UseVisualStyleBackColor = false;
+            this.Markall.CheckedChanged += new System.EventHandler(this.Markall_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1044, 561);
             this.Controls.Add(this.guna2CustomGradientPanel1);
@@ -357,7 +369,6 @@
             this.Controls.Add(this.RejectLessonBtn);
             this.Controls.Add(this.AcceptLessonBtn);
             this.Controls.Add(this.LessonTextBox);
-            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.ReplacedteacherRadioBtn);
@@ -384,7 +395,6 @@
         private Guna.UI2.WinForms.Guna2RadioButton ReplacedteacherRadioBtn;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2TextBox LessonTextBox;
         private Guna.UI2.WinForms.Guna2Button AcceptLessonBtn;
         private Guna.UI2.WinForms.Guna2Button RejectLessonBtn;
@@ -398,6 +408,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private System.Windows.Forms.MaskedTextBox DiamondCounttxtb;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2RadioButton Markall;
     }
 }
 
