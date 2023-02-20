@@ -19,7 +19,6 @@ namespace Logbook
         public Form1()
         {
             DiamondClick = new EventHandler<EventArgs>(DecreaseDiamond);
-           
             InitializeComponent();
             DateLbl.Text = DateTime.Now.ToLongDateString().ToString();
             Students = new List<Student>
@@ -50,15 +49,15 @@ namespace Logbook
                 },
                 new Student
                 {
-                    Name="Dwayne",
-                    Surname="Johnson",
+                    Name="Oliver",
+                    Surname="James",
                     FatherName="Rocky"
                 },
                 new Student
                 {
                     Name="Mike",
-                    Surname="MIkezade",
-                    FatherName="Godd boy"
+                    Surname="Mikeli",
+                    FatherName="Oliver"
                 }
             };
             int y = 259;
@@ -74,9 +73,16 @@ namespace Logbook
                 this.Controls.Add(uc);
             }
         }
-
-      
-
+        private void Markall_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MarkAllClick1.Invoke(sender, e);
+            }
+            catch (Exception)
+            {
+            }
+        }
         private void DecreaseDiamond(object sender, EventArgs e)
         {
             if (diamond > 0)
@@ -101,11 +107,6 @@ namespace Logbook
         {
             LessonTextBox.Text = String.Empty;
             LessonTextBox.Enabled = false;
-        }
-        private void Markall_CheckedChanged(object sender, EventArgs e)
-        {
-            
-            MarkAllClick1.Invoke(sender, e);
         }
     }
 }

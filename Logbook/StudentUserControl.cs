@@ -12,7 +12,7 @@ namespace Logbook
 {
     public partial class StudentUserControl : UserControl
     {
-        public EventHandler<EventArgs> MarkAllClick { get; set; }
+       
         int diamond2click = 0;
         int diamond1click = 0;
         public string Name
@@ -32,6 +32,7 @@ namespace Logbook
         }
         public EventHandler<EventArgs> DiamondClick { get; set; }
         public EventHandler<EventArgs> MarkAllClick1 { get; set; }
+
         public StudentUserControl()
         {
             MarkAllClick1 = new EventHandler<EventArgs>(MarkAllGreens);
@@ -40,12 +41,17 @@ namespace Logbook
             StudentDateLbl.Text = DateTime.Now.ToShortDateString().ToString();
             AddClassworkComboBox();
         }
-
         private void MarkAllGreens(object sender, EventArgs e)
         {
-            greenbtn.Checked = true;
+            try
+            {
+                //greenbtn.AutoCheck = true;
+                InspectionComboBox.Enabled = false;
+            }
+            catch (Exception)
+            {
+            }
         }
-
         List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
         List<int> numbers1 = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
         public void AddClassworkComboBox()
@@ -71,7 +77,6 @@ namespace Logbook
             }
             diamond1click += 1;
         }
-
         private void Diamond2Btn_Click(object sender, EventArgs e)
         {
             if (diamond2click == 0 && diamond1click == 1)
@@ -129,7 +134,6 @@ namespace Logbook
             DeleteDiamondBtn.Enabled = false;
             MessageBtn.Enabled = false;
         }
-
         private void MessageBtn_Click(object sender, EventArgs e)
         {
             guna2TextBox3.Enabled = true; 
