@@ -12,9 +12,15 @@ namespace Logbook
 {
     public partial class StudentUserControl : UserControl
     {
-       
+        Form1 form1 = new Form1();
         int diamond2click = 0;
         int diamond1click = 0;
+       
+        public RadioButton GreenBtn
+        {
+            get { return greenbtn; }
+            set { greenbtn.Checked = true; }
+        }
         public string Name
         {
             get { return StudentNameLbl.Text; }
@@ -31,26 +37,13 @@ namespace Logbook
             set { StudentFatherNameLbl.Text = value; }
         }
         public EventHandler<EventArgs> DiamondClick { get; set; }
-        public EventHandler<EventArgs> MarkAllClick1 { get; set; }
 
         public StudentUserControl()
         {
-            MarkAllClick1 = new EventHandler<EventArgs>(MarkAllGreens);
             InitializeComponent();
             AddInspectionComboBox();
             StudentDateLbl.Text = DateTime.Now.ToShortDateString().ToString();
             AddClassworkComboBox();
-        }
-        private void MarkAllGreens(object sender, EventArgs e)
-        {
-            try
-            {
-                //greenbtn.AutoCheck = true;
-                InspectionComboBox.Enabled = false;
-            }
-            catch (Exception)
-            {
-            }
         }
         List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
         List<int> numbers1 = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };

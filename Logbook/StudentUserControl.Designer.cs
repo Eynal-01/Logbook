@@ -44,7 +44,6 @@
             this.redbtn = new Guna.UI2.WinForms.Guna2RadioButton();
             this.greenbtn = new Guna.UI2.WinForms.Guna2RadioButton();
             this.commentbox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.Comment = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -166,6 +165,7 @@
             this.DeleteDiamondBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.DeleteDiamondBtn.Enabled = false;
             this.DeleteDiamondBtn.FillColor = System.Drawing.Color.Transparent;
+            this.DeleteDiamondBtn.FocusedColor = System.Drawing.Color.Transparent;
             this.DeleteDiamondBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DeleteDiamondBtn.ForeColor = System.Drawing.Color.White;
             this.DeleteDiamondBtn.Location = new System.Drawing.Point(696, 16);
@@ -307,20 +307,6 @@
             this.commentbox.SelectedText = "";
             this.commentbox.Size = new System.Drawing.Size(318, 50);
             this.commentbox.TabIndex = 21;
-            // 
-            // guna2ContextMenuStrip1
-            // 
-            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
-            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
-            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Comment
             // 
@@ -491,7 +477,6 @@
         private Guna.UI2.WinForms.Guna2RadioButton redbtn;
         private Guna.UI2.WinForms.Guna2RadioButton greenbtn;
         private Guna.UI2.WinForms.Guna2TextBox commentbox;
-        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2TextBox Comment;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;

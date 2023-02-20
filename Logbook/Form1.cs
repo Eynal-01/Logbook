@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,7 +16,6 @@ namespace Logbook
         public int diamond = 5;
         public List<Student> Students { get; set; }
         public EventHandler<EventArgs> DiamondClick { get; set; }
-        public EventHandler<EventArgs> MarkAllClick1 { get; set; }
         public Form1()
         {
             DiamondClick = new EventHandler<EventArgs>(DecreaseDiamond);
@@ -63,25 +63,20 @@ namespace Logbook
             int y = 259;
             foreach (var student in Students)
             {
-                var uc = new StudentUserControl();
                 uc.DiamondClick = DiamondClick;
                 uc.Name = student.Name;
                 uc.Surname = student.Surname;
                 uc.Fathername = student.FatherName;
                 uc.Location = new Point(15, y);
                 y += 60;
+                uc.GreenBtn.Checked = true;
                 this.Controls.Add(uc);
             }
         }
-        private void Markall_CheckedChanged(object sender, EventArgs e)
+        StudentUserControl uc = new StudentUserControl();
+        public void Markall_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                MarkAllClick1.Invoke(sender, e);
-            }
-            catch (Exception)
-            {
-            }
+            uc.GreenBtn.Checked = true;
         }
         private void DecreaseDiamond(object sender, EventArgs e)
         {
