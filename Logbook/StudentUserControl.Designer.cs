@@ -48,20 +48,20 @@
             // GreenBtn
             // 
             this.GreenBtn.BackColor = System.Drawing.Color.Transparent;
-            this.GreenBtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GreenBtn.CheckedState.BorderColor = System.Drawing.Color.Red;
             this.GreenBtn.CheckedState.BorderThickness = 0;
-            this.GreenBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GreenBtn.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GreenBtn.CheckedState.FillColor = System.Drawing.Color.Red;
+            this.GreenBtn.CheckedState.InnerColor = System.Drawing.Color.Red;
             this.GreenBtn.ForeColor = System.Drawing.Color.Lime;
             this.GreenBtn.Location = new System.Drawing.Point(321, 25);
             this.GreenBtn.Name = "GreenBtn";
             this.GreenBtn.Size = new System.Drawing.Size(15, 15);
             this.GreenBtn.TabIndex = 3;
             this.GreenBtn.Text = "GreenBtn";
-            this.GreenBtn.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GreenBtn.UncheckedState.BorderColor = System.Drawing.Color.Red;
             this.GreenBtn.UncheckedState.BorderThickness = 2;
-            this.GreenBtn.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.GreenBtn.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GreenBtn.UncheckedState.FillColor = System.Drawing.Color.Red;
+            this.GreenBtn.UncheckedState.InnerColor = System.Drawing.Color.WhiteSmoke;
             // 
             // YellowBtn
             // 
@@ -132,6 +132,7 @@
             this.ClassworkComboBox.Name = "ClassworkComboBox";
             this.ClassworkComboBox.Size = new System.Drawing.Size(77, 36);
             this.ClassworkComboBox.TabIndex = 7;
+            this.ClassworkComboBox.SelectedIndexChanged += new System.EventHandler(this.ClassworkComboBox_SelectedIndexChanged);
             // 
             // StudentDateLbl
             // 
@@ -292,7 +293,6 @@
         private Guna.UI2.WinForms.Guna2CustomRadioButton YellowBtn;
         private Guna.UI2.WinForms.Guna2CustomRadioButton RedBtn;
         private Guna.UI2.WinForms.Guna2ComboBox InspectionComboBox;
-        private Guna.UI2.WinForms.Guna2ComboBox ClassworkComboBox;
         private Guna.UI2.WinForms.Guna2Button Diamond1Btn;
         private Guna.UI2.WinForms.Guna2Button Diamond2Btn;
         private Guna.UI2.WinForms.Guna2Button Diamond3Btn;
@@ -303,5 +303,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel StudentSurnameLbl;
         private Guna.UI2.WinForms.Guna2HtmlLabel StudentFatherNameLbl;
+        public Guna.UI2.WinForms.Guna2ComboBox ClassworkComboBox;
     }
 }
