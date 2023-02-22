@@ -86,7 +86,7 @@ namespace Logbook
         }
         private void DecreaseDiamond(object sender, EventArgs e)
         {
-            if (diamond > 0)
+            if (diamond > 0 && diamond<=5)
             {
                 --diamond;
                 DiamondCounttxtb.Text = diamond.ToString();
@@ -108,6 +108,30 @@ namespace Logbook
         {
             LessonTextBox.Text = String.Empty;
             LessonTextBox.Enabled = false;
+        }
+
+        private void MainteacherRadioBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            guna2CustomGradientPanel1.Enabled = true;
+            foreach (var item in this.Controls)
+            {
+                if (item is StudentUserControl uc)
+                {
+                    uc.Enabled= true;
+                }
+            }
+        }
+
+        private void ReplacedteacherRadioBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            guna2CustomGradientPanel1.Enabled = true;
+            foreach (var item in this.Controls)
+            {
+                if (item is StudentUserControl uc)
+                {
+                    uc.Enabled = true;
+                }
+            }
         }
     }
 }

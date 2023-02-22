@@ -35,11 +35,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.StudentSurnameLbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.StudentFatherNameLbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.MessageBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.DeleteDiamondBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.Diamond3Btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Diamond2Btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Diamond1Btn = new Guna.UI2.WinForms.Guna2Button();
             this.Yellowbtn = new Guna.UI2.WinForms.Guna2RadioButton();
             this.redbtn = new Guna.UI2.WinForms.Guna2RadioButton();
             this.greenbtn = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -50,6 +45,11 @@
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.AddCommentBtn = new Guna.UI2.WinForms.Guna2Button();
             this.RejectCommentBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.MessageBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.DeleteDiamondBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.Diamond3Btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Diamond2Btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Diamond1Btn = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // InspectionComboBox
@@ -65,10 +65,11 @@
             this.InspectionComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.InspectionComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.InspectionComboBox.ItemHeight = 30;
-            this.InspectionComboBox.Location = new System.Drawing.Point(412, 10);
+            this.InspectionComboBox.Location = new System.Drawing.Point(431, 10);
             this.InspectionComboBox.Name = "InspectionComboBox";
             this.InspectionComboBox.Size = new System.Drawing.Size(77, 36);
             this.InspectionComboBox.TabIndex = 6;
+            this.InspectionComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ClassworkComboBox
             // 
@@ -83,10 +84,11 @@
             this.ClassworkComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.ClassworkComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.ClassworkComboBox.ItemHeight = 30;
-            this.ClassworkComboBox.Location = new System.Drawing.Point(517, 10);
+            this.ClassworkComboBox.Location = new System.Drawing.Point(532, 10);
             this.ClassworkComboBox.Name = "ClassworkComboBox";
             this.ClassworkComboBox.Size = new System.Drawing.Size(77, 36);
             this.ClassworkComboBox.TabIndex = 7;
+            this.ClassworkComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ClassworkComboBox.SelectedIndexChanged += new System.EventHandler(this.ClassworkComboBox_SelectedIndexChanged);
             // 
             // StudentDateLbl
@@ -138,94 +140,6 @@
             this.StudentFatherNameLbl.TabIndex = 17;
             this.StudentFatherNameLbl.Text = "vv";
             // 
-            // MessageBtn
-            // 
-            this.MessageBtn.Animated = true;
-            this.MessageBtn.BackgroundImage = global::Logbook.Properties.Resources.icons8_bubble_24;
-            this.MessageBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.MessageBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.MessageBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.MessageBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.MessageBtn.Enabled = false;
-            this.MessageBtn.FillColor = System.Drawing.Color.Transparent;
-            this.MessageBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.MessageBtn.ForeColor = System.Drawing.Color.White;
-            this.MessageBtn.Location = new System.Drawing.Point(738, 17);
-            this.MessageBtn.Name = "MessageBtn";
-            this.MessageBtn.Size = new System.Drawing.Size(24, 23);
-            this.MessageBtn.TabIndex = 14;
-            this.MessageBtn.Click += new System.EventHandler(this.MessageBtn_Click);
-            // 
-            // DeleteDiamondBtn
-            // 
-            this.DeleteDiamondBtn.BackgroundImage = global::Logbook.Properties.Resources.icons8_x_button_24;
-            this.DeleteDiamondBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteDiamondBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteDiamondBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.DeleteDiamondBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DeleteDiamondBtn.Enabled = false;
-            this.DeleteDiamondBtn.FillColor = System.Drawing.Color.Transparent;
-            this.DeleteDiamondBtn.FocusedColor = System.Drawing.Color.Transparent;
-            this.DeleteDiamondBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DeleteDiamondBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteDiamondBtn.Location = new System.Drawing.Point(696, 16);
-            this.DeleteDiamondBtn.Name = "DeleteDiamondBtn";
-            this.DeleteDiamondBtn.Size = new System.Drawing.Size(25, 25);
-            this.DeleteDiamondBtn.TabIndex = 11;
-            this.DeleteDiamondBtn.Text = "guna2Button1";
-            // 
-            // Diamond3Btn
-            // 
-            this.Diamond3Btn.BackColor = System.Drawing.Color.Transparent;
-            this.Diamond3Btn.BackgroundImage = global::Logbook.Properties.Resources.icons8_diamond_25;
-            this.Diamond3Btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Diamond3Btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Diamond3Btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Diamond3Btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Diamond3Btn.Enabled = false;
-            this.Diamond3Btn.FillColor = System.Drawing.Color.Transparent;
-            this.Diamond3Btn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Diamond3Btn.ForeColor = System.Drawing.Color.White;
-            this.Diamond3Btn.Location = new System.Drawing.Point(669, 16);
-            this.Diamond3Btn.Name = "Diamond3Btn";
-            this.Diamond3Btn.Size = new System.Drawing.Size(25, 25);
-            this.Diamond3Btn.TabIndex = 10;
-            this.Diamond3Btn.Click += new System.EventHandler(this.Diamond3Btn_Click);
-            // 
-            // Diamond2Btn
-            // 
-            this.Diamond2Btn.BackgroundImage = global::Logbook.Properties.Resources.icons8_diamond_25;
-            this.Diamond2Btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Diamond2Btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Diamond2Btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Diamond2Btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Diamond2Btn.Enabled = false;
-            this.Diamond2Btn.FillColor = System.Drawing.Color.Transparent;
-            this.Diamond2Btn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Diamond2Btn.ForeColor = System.Drawing.Color.White;
-            this.Diamond2Btn.Location = new System.Drawing.Point(642, 16);
-            this.Diamond2Btn.Name = "Diamond2Btn";
-            this.Diamond2Btn.Size = new System.Drawing.Size(25, 25);
-            this.Diamond2Btn.TabIndex = 9;
-            this.Diamond2Btn.Click += new System.EventHandler(this.Diamond2Btn_Click);
-            // 
-            // Diamond1Btn
-            // 
-            this.Diamond1Btn.BackgroundImage = global::Logbook.Properties.Resources.icons8_diamond_25;
-            this.Diamond1Btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Diamond1Btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Diamond1Btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Diamond1Btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Diamond1Btn.Enabled = false;
-            this.Diamond1Btn.FillColor = System.Drawing.Color.Transparent;
-            this.Diamond1Btn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Diamond1Btn.ForeColor = System.Drawing.Color.White;
-            this.Diamond1Btn.Location = new System.Drawing.Point(615, 16);
-            this.Diamond1Btn.Name = "Diamond1Btn";
-            this.Diamond1Btn.Size = new System.Drawing.Size(25, 25);
-            this.Diamond1Btn.TabIndex = 8;
-            this.Diamond1Btn.Click += new System.EventHandler(this.Diamond1Btn_Click);
-            // 
             // Yellowbtn
             // 
             this.Yellowbtn.AutoSize = true;
@@ -235,7 +149,7 @@
             this.Yellowbtn.CheckedState.InnerColor = System.Drawing.Color.Yellow;
             this.Yellowbtn.CheckedState.InnerOffset = -4;
             this.Yellowbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Yellowbtn.Location = new System.Drawing.Point(326, 22);
+            this.Yellowbtn.Location = new System.Drawing.Point(355, 22);
             this.Yellowbtn.Name = "Yellowbtn";
             this.Yellowbtn.Size = new System.Drawing.Size(14, 13);
             this.Yellowbtn.TabIndex = 18;
@@ -255,7 +169,7 @@
             this.redbtn.CheckedState.InnerColor = System.Drawing.Color.Red;
             this.redbtn.CheckedState.InnerOffset = -4;
             this.redbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.redbtn.Location = new System.Drawing.Point(362, 22);
+            this.redbtn.Location = new System.Drawing.Point(384, 22);
             this.redbtn.Name = "redbtn";
             this.redbtn.Size = new System.Drawing.Size(14, 13);
             this.redbtn.TabIndex = 19;
@@ -276,7 +190,7 @@
             this.greenbtn.CheckedState.InnerColor = System.Drawing.Color.SpringGreen;
             this.greenbtn.CheckedState.InnerOffset = -4;
             this.greenbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.greenbtn.Location = new System.Drawing.Point(291, 22);
+            this.greenbtn.Location = new System.Drawing.Point(327, 22);
             this.greenbtn.Name = "greenbtn";
             this.greenbtn.Size = new System.Drawing.Size(14, 13);
             this.greenbtn.TabIndex = 20;
@@ -382,7 +296,7 @@
             this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox3.ForeColor = System.Drawing.Color.DimGray;
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(769, 4);
+            this.guna2TextBox3.Location = new System.Drawing.Point(784, 4);
             this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
@@ -403,7 +317,7 @@
             this.AddCommentBtn.FillColor = System.Drawing.Color.White;
             this.AddCommentBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddCommentBtn.ForeColor = System.Drawing.Color.White;
-            this.AddCommentBtn.Location = new System.Drawing.Point(912, 3);
+            this.AddCommentBtn.Location = new System.Drawing.Point(920, 3);
             this.AddCommentBtn.Name = "AddCommentBtn";
             this.AddCommentBtn.Size = new System.Drawing.Size(75, 25);
             this.AddCommentBtn.TabIndex = 27;
@@ -420,11 +334,103 @@
             this.RejectCommentBtn.FillColor = System.Drawing.Color.White;
             this.RejectCommentBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.RejectCommentBtn.ForeColor = System.Drawing.Color.White;
-            this.RejectCommentBtn.Location = new System.Drawing.Point(912, 31);
+            this.RejectCommentBtn.Location = new System.Drawing.Point(920, 31);
             this.RejectCommentBtn.Name = "RejectCommentBtn";
             this.RejectCommentBtn.Size = new System.Drawing.Size(75, 25);
             this.RejectCommentBtn.TabIndex = 28;
             this.RejectCommentBtn.Text = "Reject";
+            this.RejectCommentBtn.Click += new System.EventHandler(this.RejectCommentBtn_Click);
+            // 
+            // MessageBtn
+            // 
+            this.MessageBtn.Animated = true;
+            this.MessageBtn.BackgroundImage = global::Logbook.Properties.Resources.icons8_bubble_24;
+            this.MessageBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.MessageBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.MessageBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.MessageBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.MessageBtn.Enabled = false;
+            this.MessageBtn.FillColor = System.Drawing.Color.Transparent;
+            this.MessageBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.MessageBtn.ForeColor = System.Drawing.Color.White;
+            this.MessageBtn.Location = new System.Drawing.Point(748, 17);
+            this.MessageBtn.Name = "MessageBtn";
+            this.MessageBtn.Size = new System.Drawing.Size(24, 23);
+            this.MessageBtn.TabIndex = 14;
+            this.MessageBtn.Click += new System.EventHandler(this.MessageBtn_Click);
+            // 
+            // DeleteDiamondBtn
+            // 
+            this.DeleteDiamondBtn.BackgroundImage = global::Logbook.Properties.Resources.icons8_x_button_24;
+            this.DeleteDiamondBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteDiamondBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteDiamondBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DeleteDiamondBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DeleteDiamondBtn.Enabled = false;
+            this.DeleteDiamondBtn.FillColor = System.Drawing.Color.Transparent;
+            this.DeleteDiamondBtn.FocusedColor = System.Drawing.Color.Transparent;
+            this.DeleteDiamondBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DeleteDiamondBtn.ForeColor = System.Drawing.Color.White;
+            this.DeleteDiamondBtn.Location = new System.Drawing.Point(705, 16);
+            this.DeleteDiamondBtn.Name = "DeleteDiamondBtn";
+            this.DeleteDiamondBtn.Size = new System.Drawing.Size(25, 25);
+            this.DeleteDiamondBtn.TabIndex = 11;
+            this.DeleteDiamondBtn.Text = "guna2Button1";
+            // 
+            // Diamond3Btn
+            // 
+            this.Diamond3Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Diamond3Btn.BackgroundImage = global::Logbook.Properties.Resources.icons8_diamond_25;
+            this.Diamond3Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Diamond3Btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Diamond3Btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Diamond3Btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Diamond3Btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Diamond3Btn.Enabled = false;
+            this.Diamond3Btn.FillColor = System.Drawing.Color.Transparent;
+            this.Diamond3Btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Diamond3Btn.ForeColor = System.Drawing.Color.White;
+            this.Diamond3Btn.Location = new System.Drawing.Point(676, 16);
+            this.Diamond3Btn.Name = "Diamond3Btn";
+            this.Diamond3Btn.Size = new System.Drawing.Size(25, 25);
+            this.Diamond3Btn.TabIndex = 10;
+            this.Diamond3Btn.Click += new System.EventHandler(this.Diamond3Btn_Click);
+            // 
+            // Diamond2Btn
+            // 
+            this.Diamond2Btn.BackgroundImage = global::Logbook.Properties.Resources.icons8_diamond_25;
+            this.Diamond2Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Diamond2Btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Diamond2Btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Diamond2Btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Diamond2Btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Diamond2Btn.Enabled = false;
+            this.Diamond2Btn.FillColor = System.Drawing.Color.Transparent;
+            this.Diamond2Btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Diamond2Btn.ForeColor = System.Drawing.Color.White;
+            this.Diamond2Btn.Location = new System.Drawing.Point(650, 16);
+            this.Diamond2Btn.Name = "Diamond2Btn";
+            this.Diamond2Btn.Size = new System.Drawing.Size(25, 25);
+            this.Diamond2Btn.TabIndex = 9;
+            this.Diamond2Btn.Click += new System.EventHandler(this.Diamond2Btn_Click);
+            // 
+            // Diamond1Btn
+            // 
+            this.Diamond1Btn.BackgroundImage = global::Logbook.Properties.Resources.icons8_diamond_25;
+            this.Diamond1Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Diamond1Btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Diamond1Btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Diamond1Btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Diamond1Btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Diamond1Btn.Enabled = false;
+            this.Diamond1Btn.FillColor = System.Drawing.Color.Transparent;
+            this.Diamond1Btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Diamond1Btn.ForeColor = System.Drawing.Color.White;
+            this.Diamond1Btn.Location = new System.Drawing.Point(624, 16);
+            this.Diamond1Btn.Name = "Diamond1Btn";
+            this.Diamond1Btn.Size = new System.Drawing.Size(25, 25);
+            this.Diamond1Btn.TabIndex = 8;
+            this.Diamond1Btn.Click += new System.EventHandler(this.Diamond1Btn_Click);
             // 
             // StudentUserControl
             // 
@@ -453,6 +459,7 @@
             this.Controls.Add(this.Diamond1Btn);
             this.Controls.Add(this.ClassworkComboBox);
             this.Controls.Add(this.InspectionComboBox);
+            this.Enabled = false;
             this.Name = "StudentUserControl";
             this.Size = new System.Drawing.Size(1000, 60);
             this.ResumeLayout(false);

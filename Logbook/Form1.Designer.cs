@@ -38,6 +38,7 @@
             this.RejectLessonBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.Markall = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.DiamondCounttxtb = new System.Windows.Forms.MaskedTextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,7 +48,6 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.Markall = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +95,7 @@
             this.MainteacherRadioBtn.UncheckedState.BorderThickness = 2;
             this.MainteacherRadioBtn.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.MainteacherRadioBtn.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.MainteacherRadioBtn.CheckedChanged += new System.EventHandler(this.MainteacherRadioBtn_CheckedChanged);
             // 
             // ReplacedteacherRadioBtn
             // 
@@ -115,6 +116,7 @@
             this.ReplacedteacherRadioBtn.UncheckedState.BorderThickness = 2;
             this.ReplacedteacherRadioBtn.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.ReplacedteacherRadioBtn.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.ReplacedteacherRadioBtn.CheckedChanged += new System.EventHandler(this.ReplacedteacherRadioBtn_CheckedChanged);
             // 
             // guna2HtmlLabel2
             // 
@@ -221,6 +223,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel5);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2CustomGradientPanel1.Enabled = false;
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.PowderBlue;
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.PowderBlue;
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.PowderBlue;
@@ -229,6 +232,27 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1000, 60);
             this.guna2CustomGradientPanel1.TabIndex = 11;
+            // 
+            // Markall
+            // 
+            this.Markall.AutoSize = true;
+            this.Markall.BackColor = System.Drawing.Color.Transparent;
+            this.Markall.CheckedState.BorderColor = System.Drawing.Color.Lime;
+            this.Markall.CheckedState.BorderThickness = 0;
+            this.Markall.CheckedState.FillColor = System.Drawing.Color.Lime;
+            this.Markall.CheckedState.InnerColor = System.Drawing.Color.Turquoise;
+            this.Markall.CheckedState.InnerOffset = -4;
+            this.Markall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Markall.Location = new System.Drawing.Point(354, 39);
+            this.Markall.Name = "Markall";
+            this.Markall.Size = new System.Drawing.Size(14, 13);
+            this.Markall.TabIndex = 9;
+            this.Markall.UncheckedState.BorderColor = System.Drawing.Color.Lime;
+            this.Markall.UncheckedState.BorderThickness = 2;
+            this.Markall.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.Markall.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Markall.UseVisualStyleBackColor = false;
+            this.Markall.CheckedChanged += new System.EventHandler(this.Markall_CheckedChanged);
             // 
             // guna2PictureBox1
             // 
@@ -335,27 +359,6 @@
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "guna2Button1";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // Markall
-            // 
-            this.Markall.AutoSize = true;
-            this.Markall.BackColor = System.Drawing.Color.Transparent;
-            this.Markall.CheckedState.BorderColor = System.Drawing.Color.Lime;
-            this.Markall.CheckedState.BorderThickness = 0;
-            this.Markall.CheckedState.FillColor = System.Drawing.Color.Lime;
-            this.Markall.CheckedState.InnerColor = System.Drawing.Color.Turquoise;
-            this.Markall.CheckedState.InnerOffset = -4;
-            this.Markall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Markall.Location = new System.Drawing.Point(354, 39);
-            this.Markall.Name = "Markall";
-            this.Markall.Size = new System.Drawing.Size(14, 13);
-            this.Markall.TabIndex = 9;
-            this.Markall.UncheckedState.BorderColor = System.Drawing.Color.Lime;
-            this.Markall.UncheckedState.BorderThickness = 2;
-            this.Markall.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.Markall.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Markall.UseVisualStyleBackColor = false;
-            this.Markall.CheckedChanged += new System.EventHandler(this.Markall_CheckedChanged);
             // 
             // Form1
             // 

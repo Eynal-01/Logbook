@@ -124,5 +124,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-gem-stone-48 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamond20.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

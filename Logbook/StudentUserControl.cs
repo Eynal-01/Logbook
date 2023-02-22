@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logbook.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,10 @@ namespace Logbook
 {
     public partial class StudentUserControl : UserControl
     {
-      
+
         int diamond2click = 0;
         int diamond1click = 0;
-       
+
         public RadioButton GreenBtn
         {
             get { return greenbtn; }
@@ -42,7 +43,7 @@ namespace Logbook
         {
             InitializeComponent();
             AddInspectionComboBox();
-            StudentDateLbl.Text = DateTime.Now.ToShortDateString().ToString();
+            StudentDateLbl.Text = DateTime.Now.Day + " / " + DateTime.Now.Month + " / " + DateTime.Now.Year;
             AddClassworkComboBox();
         }
         List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
@@ -64,9 +65,18 @@ namespace Logbook
         }
         private void Diamond1Btn_Click(object sender, EventArgs e)
         {
-            if (diamond2click == 0)
+            if (diamond2click == 0 && diamond1click == 0)
             {
                 DiamondClick.Invoke(sender, e);
+                Diamond1Btn.BackgroundImage = Resources.diamond20;
+            }
+            else if(diamond2click == 1 && diamond1click==0)
+            {
+                Diamond2Btn.BackgroundImage = Resources.icons8_diamond_25;
+            }
+            else if(diamond1click == 1)
+            {
+                Diamond1Btn.BackgroundImage = Resources.icons8_diamond_25;
             }
             diamond1click += 1;
         }
@@ -76,22 +86,29 @@ namespace Logbook
             {
                 DiamondClick.Invoke(sender, e);
                 diamond2click += 1;
+                Diamond2Btn.BackgroundImage = Resources.diamond20;
+                Diamond1Btn.BackgroundImage = Resources.diamond20;
             }
             else if (diamond2click == 0 && diamond1click == 0)
             {
                 DiamondClick.Invoke(sender, e);
                 DiamondClick.Invoke(sender, e);
+                Diamond2Btn.BackgroundImage = Resources.diamond20;
+                Diamond1Btn.BackgroundImage = Resources.diamond20;
                 diamond2click += 1;
             }
+
         }
         private void Diamond3Btn_Click(object sender, EventArgs e)
         {
             if (diamond2click == 1)
             {
                 DiamondClick.Invoke(sender, e);
+                Diamond3Btn.BackgroundImage = Resources.diamond20;
             }
             else if (diamond2click == 2)
             {
+                Diamond3Btn.BackgroundImage = Resources.diamond20;
                 DiamondClick.Invoke(sender, e);
                 DiamondClick.Invoke(sender, e);
                 DiamondClick.Invoke(sender, e);
@@ -129,17 +146,27 @@ namespace Logbook
         }
         private void MessageBtn_Click(object sender, EventArgs e)
         {
-            guna2TextBox3.Enabled = true; 
+            guna2TextBox3.Enabled = true;
         }
         private void AddCommentBtn_Click(object sender, EventArgs e)
         {
             guna2TextBox3.Enabled = false;
             guna2TextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            RejectCommentBtn.FillColor = Color.White;
+            AddCommentBtn.FillColor = Color.White;
         }
         private void guna2TextBox3_TextChanged(object sender, EventArgs e)
         {
             AddCommentBtn.FillColor = Color.DodgerBlue;
             RejectCommentBtn.FillColor = Color.DodgerBlue;
+        }
+
+        private void RejectCommentBtn_Click(object sender, EventArgs e)
+        {
+            guna2TextBox3.Text = String.Empty;
+            guna2TextBox3.Enabled = false;
+            RejectCommentBtn.FillColor = Color.White;
+            AddCommentBtn.FillColor = Color.White;
         }
     }
 }
