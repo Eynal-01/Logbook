@@ -12,7 +12,7 @@ namespace Logbook
 {
     public partial class StudentUserControl : UserControl
     {
-        Form1 form1 = new Form1();
+      
         int diamond2click = 0;
         int diamond1click = 0;
        

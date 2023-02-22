@@ -13,6 +13,7 @@ namespace Logbook
 {
     public partial class Form1 : Form
     {
+        StudentUserControl uc;
         public int diamond = 5;
         public List<Student> Students { get; set; }
         public EventHandler<EventArgs> DiamondClick { get; set; }
@@ -63,17 +64,16 @@ namespace Logbook
             int y = 259;
             foreach (var student in Students)
             {
+                uc = new StudentUserControl();
                 uc.DiamondClick = DiamondClick;
                 uc.Name = student.Name;
                 uc.Surname = student.Surname;
                 uc.Fathername = student.FatherName;
                 uc.Location = new Point(15, y);
                 y += 60;
-                uc.GreenBtn.Checked = true;
                 this.Controls.Add(uc);
             }
         }
-        StudentUserControl uc = new StudentUserControl();
         public void Markall_CheckedChanged(object sender, EventArgs e)
         {
             uc.GreenBtn.Checked = true;
