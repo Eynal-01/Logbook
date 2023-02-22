@@ -376,6 +376,7 @@
             this.DeleteDiamondBtn.Size = new System.Drawing.Size(25, 25);
             this.DeleteDiamondBtn.TabIndex = 11;
             this.DeleteDiamondBtn.Text = "guna2Button1";
+            this.DeleteDiamondBtn.Click += new System.EventHandler(this.DeleteDiamondBtn_Click);
             // 
             // Diamond3Btn
             // 

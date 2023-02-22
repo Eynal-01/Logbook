@@ -16,6 +16,7 @@ namespace Logbook
 
         int diamond2click = 0;
         int diamond1click = 0;
+        int diamond3click = 0;
 
         public RadioButton GreenBtn
         {
@@ -70,11 +71,11 @@ namespace Logbook
                 DiamondClick.Invoke(sender, e);
                 Diamond1Btn.BackgroundImage = Resources.diamond20;
             }
-            else if(diamond2click == 1 && diamond1click==0)
+            else if (diamond2click == 1 && diamond1click == 0)
             {
                 Diamond2Btn.BackgroundImage = Resources.icons8_diamond_25;
             }
-            else if(diamond1click == 1)
+            else if (diamond1click == 1)
             {
                 Diamond1Btn.BackgroundImage = Resources.icons8_diamond_25;
             }
@@ -87,7 +88,6 @@ namespace Logbook
                 DiamondClick.Invoke(sender, e);
                 diamond2click += 1;
                 Diamond2Btn.BackgroundImage = Resources.diamond20;
-                Diamond1Btn.BackgroundImage = Resources.diamond20;
             }
             else if (diamond2click == 0 && diamond1click == 0)
             {
@@ -95,9 +95,14 @@ namespace Logbook
                 DiamondClick.Invoke(sender, e);
                 Diamond2Btn.BackgroundImage = Resources.diamond20;
                 Diamond1Btn.BackgroundImage = Resources.diamond20;
-                diamond2click += 1;
             }
-
+            else if (diamond3click == 1)
+            {`
+                Diamond3Btn.BackgroundImage = Resources.icons8_diamond_25;
+                Diamond2Btn.BackgroundImage = Resources.diamond20;
+                Diamond1Btn.BackgroundImage = Resources.diamond20;
+            }
+            diamond2click += 1;
         }
         private void Diamond3Btn_Click(object sender, EventArgs e)
         {
@@ -106,13 +111,23 @@ namespace Logbook
                 DiamondClick.Invoke(sender, e);
                 Diamond3Btn.BackgroundImage = Resources.diamond20;
             }
-            else if (diamond2click == 2)
+            else if (diamond2click == 0 && diamond1click == 1)
             {
+                DiamondClick.Invoke(sender, e);
+                DiamondClick.Invoke(sender, e);
                 Diamond3Btn.BackgroundImage = Resources.diamond20;
+                Diamond2Btn.BackgroundImage = Resources.diamond20;
+            }
+            else if (diamond2click == 0 && diamond1click == 0)
+            {
+                Diamond1Btn.BackgroundImage = Resources.diamond20;
+                Diamond3Btn.BackgroundImage = Resources.diamond20;
+                Diamond2Btn.BackgroundImage = Resources.diamond20;
                 DiamondClick.Invoke(sender, e);
                 DiamondClick.Invoke(sender, e);
                 DiamondClick.Invoke(sender, e);
             }
+            diamond3click += 1;
         }
         private void Yellowbtn_CheckedChanged(object sender, EventArgs e)
         {
@@ -167,6 +182,13 @@ namespace Logbook
             guna2TextBox3.Enabled = false;
             RejectCommentBtn.FillColor = Color.White;
             AddCommentBtn.FillColor = Color.White;
+        }
+
+        private void DeleteDiamondBtn_Click(object sender, EventArgs e)
+        {
+            Diamond1Btn.BackgroundImage = Resources.icons8_diamond_25;
+            Diamond2Btn.BackgroundImage = Resources.icons8_diamond_25;
+            Diamond3Btn.BackgroundImage = Resources.icons8_diamond_25;
         }
     }
 }
