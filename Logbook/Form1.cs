@@ -76,7 +76,13 @@ namespace Logbook
         }
         public void Markall_CheckedChanged(object sender, EventArgs e)
         {
-            uc.GreenBtn.Checked = true;
+            foreach (var item in this.Controls)
+            {
+                if (item is StudentUserControl uc)
+                {
+                    uc.GreenBtn.Checked = true;
+                }
+            }
         }
         private void DecreaseDiamond(object sender, EventArgs e)
         {
