@@ -121,7 +121,6 @@ namespace Logbook
                 }
             }
         }
-
         private void ReplacedteacherRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
             guna2CustomGradientPanel1.Enabled = true;
