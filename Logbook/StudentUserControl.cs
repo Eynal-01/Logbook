@@ -97,7 +97,7 @@ namespace Logbook
                 Diamond1Btn.BackgroundImage = Resources.diamond20;
             }
             else if (diamond3click == 1)
-            {`
+            {
                 Diamond3Btn.BackgroundImage = Resources.icons8_diamond_25;
                 Diamond2Btn.BackgroundImage = Resources.diamond20;
                 Diamond1Btn.BackgroundImage = Resources.diamond20;

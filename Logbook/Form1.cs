@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -112,6 +113,11 @@ namespace Logbook
 
         private void MainteacherRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
+            guna2Button1.Enabled = true;
+            AcceptLessonBtn.Enabled = true;
+            RejectLessonBtn.Enabled = true;
+            guna2Button2.Enabled = true;
+            guna2Button1.Enabled = true;
             guna2CustomGradientPanel1.Enabled = true;
             foreach (var item in this.Controls)
             {
@@ -123,6 +129,11 @@ namespace Logbook
         }
         private void ReplacedteacherRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
+            guna2Button1.Enabled = true;
+            AcceptLessonBtn.Enabled = true;
+            RejectLessonBtn.Enabled = true;
+            guna2Button2.Enabled = true;
+            guna2Button1.Enabled = true;
             guna2CustomGradientPanel1.Enabled = true;
             foreach (var item in this.Controls)
             {
